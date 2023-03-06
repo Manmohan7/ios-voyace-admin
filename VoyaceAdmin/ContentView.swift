@@ -9,13 +9,18 @@ import SwiftUI
 
 struct ContentView: View {
     var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundColor(.accentColor)
-            Text("Hello, world!")
-        }
-        .padding()
+        NavigationStack {
+            VStack {
+                // add condition to check if there is some existing data
+                if(!true) {
+                    // data exists then display it in a table format
+                    ListHotels()
+                } else {
+                    NoEntries()
+                }
+            }
+            .padding()
+        }.navigationTitle("Home shyd")
     }
 }
 

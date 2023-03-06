@@ -11,6 +11,10 @@
 		B8F27B4B29B5BD4A00158144 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8F27B4A29B5BD4A00158144 /* ContentView.swift */; };
 		B8F27B4D29B5BD4C00158144 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B8F27B4C29B5BD4C00158144 /* Assets.xcassets */; };
 		B8F27B5129B5BD4C00158144 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B8F27B5029B5BD4C00158144 /* Preview Assets.xcassets */; };
+		B8F27B5829B5C1B200158144 /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B8F27B5729B5C1B200158144 /* Launch Screen.storyboard */; };
+		B8F27B5C29B5D11C00158144 /* AddHotel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8F27B5B29B5D11C00158144 /* AddHotel.swift */; };
+		B8F27B5E29B5DB8400158144 /* NoEntries.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8F27B5D29B5DB8400158144 /* NoEntries.swift */; };
+		B8F27B6029B5DC6A00158144 /* ListHotels.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8F27B5F29B5DC6A00158144 /* ListHotels.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -20,6 +24,10 @@
 		B8F27B4C29B5BD4C00158144 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B8F27B4E29B5BD4C00158144 /* VoyaceAdmin.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = VoyaceAdmin.entitlements; sourceTree = "<group>"; };
 		B8F27B5029B5BD4C00158144 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		B8F27B5729B5C1B200158144 /* Launch Screen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
+		B8F27B5B29B5D11C00158144 /* AddHotel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddHotel.swift; sourceTree = "<group>"; };
+		B8F27B5D29B5DB8400158144 /* NoEntries.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoEntries.swift; sourceTree = "<group>"; };
+		B8F27B5F29B5DC6A00158144 /* ListHotels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListHotels.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,8 +62,12 @@
 			children = (
 				B8F27B4829B5BD4A00158144 /* VoyaceAdminApp.swift */,
 				B8F27B4A29B5BD4A00158144 /* ContentView.swift */,
+				B8F27B5F29B5DC6A00158144 /* ListHotels.swift */,
+				B8F27B5D29B5DB8400158144 /* NoEntries.swift */,
+				B8F27B5B29B5D11C00158144 /* AddHotel.swift */,
 				B8F27B4C29B5BD4C00158144 /* Assets.xcassets */,
 				B8F27B4E29B5BD4C00158144 /* VoyaceAdmin.entitlements */,
+				B8F27B5729B5C1B200158144 /* Launch Screen.storyboard */,
 				B8F27B4F29B5BD4C00158144 /* Preview Content */,
 			);
 			path = VoyaceAdmin;
@@ -127,6 +139,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B8F27B5829B5C1B200158144 /* Launch Screen.storyboard in Resources */,
 				B8F27B5129B5BD4C00158144 /* Preview Assets.xcassets in Resources */,
 				B8F27B4D29B5BD4C00158144 /* Assets.xcassets in Resources */,
 			);
@@ -140,7 +153,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				B8F27B4B29B5BD4A00158144 /* ContentView.swift in Sources */,
+				B8F27B6029B5DC6A00158144 /* ListHotels.swift in Sources */,
+				B8F27B5E29B5DB8400158144 /* NoEntries.swift in Sources */,
 				B8F27B4929B5BD4A00158144 /* VoyaceAdminApp.swift in Sources */,
+				B8F27B5C29B5D11C00158144 /* AddHotel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -273,6 +289,7 @@
 				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphonesimulator*]" = YES;
 				"INFOPLIST_KEY_UILaunchScreen_Generation[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UILaunchScreen_Generation[sdk=iphonesimulator*]" = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = "Launch Screen.storyboard";
 				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphoneos*]" = UIStatusBarStyleDefault;
 				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphonesimulator*]" = UIStatusBarStyleDefault;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
@@ -309,6 +326,7 @@
 				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphonesimulator*]" = YES;
 				"INFOPLIST_KEY_UILaunchScreen_Generation[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UILaunchScreen_Generation[sdk=iphonesimulator*]" = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = "Launch Screen.storyboard";
 				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphoneos*]" = UIStatusBarStyleDefault;
 				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphonesimulator*]" = UIStatusBarStyleDefault;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
