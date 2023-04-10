@@ -21,6 +21,9 @@
 		B8F27B5C29B5D11C00158144 /* AddHotel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8F27B5B29B5D11C00158144 /* AddHotel.swift */; };
 		B8F27B5E29B5DB8400158144 /* NoEntries.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8F27B5D29B5DB8400158144 /* NoEntries.swift */; };
 		B8F27B6029B5DC6A00158144 /* ListHotels.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8F27B5F29B5DC6A00158144 /* ListHotels.swift */; };
+		ED46EF7929E39F3300F21704 /* SignUp.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED46EF7829E39F3300F21704 /* SignUp.swift */; };
+		EDA31AAE29E3B46000342C29 /* SignIn.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDA31AAD29E3B46000342C29 /* SignIn.swift */; };
+		EDA31AB029E3B8CC00342C29 /* HotelInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDA31AAF29E3B8CC00342C29 /* HotelInfo.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -37,6 +40,9 @@
 		B8F27B5B29B5D11C00158144 /* AddHotel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddHotel.swift; sourceTree = "<group>"; };
 		B8F27B5D29B5DB8400158144 /* NoEntries.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoEntries.swift; sourceTree = "<group>"; };
 		B8F27B5F29B5DC6A00158144 /* ListHotels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListHotels.swift; sourceTree = "<group>"; };
+		ED46EF7829E39F3300F21704 /* SignUp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUp.swift; sourceTree = "<group>"; };
+		EDA31AAD29E3B46000342C29 /* SignIn.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignIn.swift; sourceTree = "<group>"; };
+		EDA31AAF29E3B8CC00342C29 /* HotelInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HotelInfo.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,6 +85,9 @@
 				B8F27B5F29B5DC6A00158144 /* ListHotels.swift */,
 				B8F27B5D29B5DB8400158144 /* NoEntries.swift */,
 				B8F27B5B29B5D11C00158144 /* AddHotel.swift */,
+				ED46EF7829E39F3300F21704 /* SignUp.swift */,
+				EDA31AAF29E3B8CC00342C29 /* HotelInfo.swift */,
+				EDA31AAD29E3B46000342C29 /* SignIn.swift */,
 				B8F27B4C29B5BD4C00158144 /* Assets.xcassets */,
 				B8F27B4E29B5BD4C00158144 /* VoyaceAdmin.entitlements */,
 				B8F27B5729B5C1B200158144 /* Launch Screen.storyboard */,
@@ -176,11 +185,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				ED46EF7929E39F3300F21704 /* SignUp.swift in Sources */,
 				B8F27B4B29B5BD4A00158144 /* ContentView.swift in Sources */,
 				B8BE994B29DFFCA800EC751F /* AdminDB.swift in Sources */,
 				B8BE995629E0056500EC751F /* NotificationHandler.swift in Sources */,
+				EDA31AB029E3B8CC00342C29 /* HotelInfo.swift in Sources */,
 				B8F27B6029B5DC6A00158144 /* ListHotels.swift in Sources */,
 				B8F27B5E29B5DB8400158144 /* NoEntries.swift in Sources */,
+				EDA31AAE29E3B46000342C29 /* SignIn.swift in Sources */,
 				B8F27B4929B5BD4A00158144 /* VoyaceAdminApp.swift in Sources */,
 				B8F27B5C29B5D11C00158144 /* AddHotel.swift in Sources */,
 			);
