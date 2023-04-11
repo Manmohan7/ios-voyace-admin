@@ -2,7 +2,7 @@
 //  HotelInfo.swift
 //  VoyaceAdmin
 //
-//  Created by Shivani Bajaj on 2023-04-09.
+//  Created by Manmohan Singh on 2023-04-09.
 //
 
 import SwiftUI

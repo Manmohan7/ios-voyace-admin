@@ -7,12 +7,15 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B816E53429E4AEF2004A0429 /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = B816E53329E4AEF2004A0429 /* FirebaseFirestore */; };
 		B8BE994B29DFFCA800EC751F /* AdminDB.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8BE994A29DFFCA800EC751F /* AdminDB.swift */; };
 		B8BE994D29DFFF1900EC751F /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = B8BE994C29DFFF1900EC751F /* GoogleService-Info.plist */; };
 		B8BE995029DFFFEB00EC751F /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = B8BE994F29DFFFEB00EC751F /* FirebaseAuth */; };
 		B8BE995229DFFFEB00EC751F /* FirebaseDatabase in Frameworks */ = {isa = PBXBuildFile; productRef = B8BE995129DFFFEB00EC751F /* FirebaseDatabase */; };
 		B8BE995429DFFFEB00EC751F /* FirebaseDatabaseSwift in Frameworks */ = {isa = PBXBuildFile; productRef = B8BE995329DFFFEB00EC751F /* FirebaseDatabaseSwift */; };
 		B8BE995629E0056500EC751F /* NotificationHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8BE995529E0056500EC751F /* NotificationHandler.swift */; };
+		B8F1B87429E4BBBB00F8A890 /* Authentication.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8F1B87329E4BBBB00F8A890 /* Authentication.swift */; };
+		B8F1B87629E4F87100F8A890 /* HotelsDB.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8F1B87529E4F87100F8A890 /* HotelsDB.swift */; };
 		B8F27B4929B5BD4A00158144 /* VoyaceAdminApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8F27B4829B5BD4A00158144 /* VoyaceAdminApp.swift */; };
 		B8F27B4B29B5BD4A00158144 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8F27B4A29B5BD4A00158144 /* ContentView.swift */; };
 		B8F27B4D29B5BD4C00158144 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B8F27B4C29B5BD4C00158144 /* Assets.xcassets */; };
@@ -30,6 +33,8 @@
 		B8BE994A29DFFCA800EC751F /* AdminDB.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdminDB.swift; sourceTree = "<group>"; };
 		B8BE994C29DFFF1900EC751F /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		B8BE995529E0056500EC751F /* NotificationHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationHandler.swift; sourceTree = "<group>"; };
+		B8F1B87329E4BBBB00F8A890 /* Authentication.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Authentication.swift; sourceTree = "<group>"; };
+		B8F1B87529E4F87100F8A890 /* HotelsDB.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HotelsDB.swift; sourceTree = "<group>"; };
 		B8F27B4529B5BD4A00158144 /* VoyaceAdmin.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VoyaceAdmin.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B8F27B4829B5BD4A00158144 /* VoyaceAdminApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VoyaceAdminApp.swift; sourceTree = "<group>"; };
 		B8F27B4A29B5BD4A00158144 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -51,6 +56,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B8BE995429DFFFEB00EC751F /* FirebaseDatabaseSwift in Frameworks */,
+				B816E53429E4AEF2004A0429 /* FirebaseFirestore in Frameworks */,
 				B8BE995229DFFFEB00EC751F /* FirebaseDatabase in Frameworks */,
 				B8BE995029DFFFEB00EC751F /* FirebaseAuth in Frameworks */,
 			);
@@ -59,11 +65,19 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		B816E53229E4AEF2004A0429 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		B8F27B3C29B5BD4A00158144 = {
 			isa = PBXGroup;
 			children = (
 				B8F27B4729B5BD4A00158144 /* VoyaceAdmin */,
 				B8F27B4629B5BD4A00158144 /* Products */,
+				B816E53229E4AEF2004A0429 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -80,6 +94,7 @@
 			children = (
 				B8BE994A29DFFCA800EC751F /* AdminDB.swift */,
 				B8F27B4829B5BD4A00158144 /* VoyaceAdminApp.swift */,
+				B8F1B87529E4F87100F8A890 /* HotelsDB.swift */,
 				B8BE995529E0056500EC751F /* NotificationHandler.swift */,
 				B8F27B4A29B5BD4A00158144 /* ContentView.swift */,
 				B8F27B5F29B5DC6A00158144 /* ListHotels.swift */,
@@ -93,6 +108,7 @@
 				B8F27B5729B5C1B200158144 /* Launch Screen.storyboard */,
 				B8BE994C29DFFF1900EC751F /* GoogleService-Info.plist */,
 				B8F27B4F29B5BD4C00158144 /* Preview Content */,
+				B8F1B87329E4BBBB00F8A890 /* Authentication.swift */,
 			);
 			path = VoyaceAdmin;
 			sourceTree = "<group>";
@@ -125,6 +141,7 @@
 				B8BE994F29DFFFEB00EC751F /* FirebaseAuth */,
 				B8BE995129DFFFEB00EC751F /* FirebaseDatabase */,
 				B8BE995329DFFFEB00EC751F /* FirebaseDatabaseSwift */,
+				B816E53329E4AEF2004A0429 /* FirebaseFirestore */,
 			);
 			productName = VoyaceAdmin;
 			productReference = B8F27B4529B5BD4A00158144 /* VoyaceAdmin.app */;
@@ -191,10 +208,12 @@
 				B8BE995629E0056500EC751F /* NotificationHandler.swift in Sources */,
 				EDA31AB029E3B8CC00342C29 /* HotelInfo.swift in Sources */,
 				B8F27B6029B5DC6A00158144 /* ListHotels.swift in Sources */,
+				B8F1B87629E4F87100F8A890 /* HotelsDB.swift in Sources */,
 				B8F27B5E29B5DB8400158144 /* NoEntries.swift in Sources */,
 				EDA31AAE29E3B46000342C29 /* SignIn.swift in Sources */,
 				B8F27B4929B5BD4A00158144 /* VoyaceAdminApp.swift in Sources */,
 				B8F27B5C29B5D11C00158144 /* AddHotel.swift in Sources */,
+				B8F1B87429E4BBBB00F8A890 /* Authentication.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -419,6 +438,11 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		B816E53329E4AEF2004A0429 /* FirebaseFirestore */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = B8BE994E29DFFFEB00EC751F /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseFirestore;
+		};
 		B8BE994F29DFFFEB00EC751F /* FirebaseAuth */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = B8BE994E29DFFFEB00EC751F /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
