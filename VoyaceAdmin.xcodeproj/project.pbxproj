@@ -15,9 +15,10 @@
 		B84A0E8229E79E820007621F /* FirebaseFirestoreCombine-Community in Frameworks */ = {isa = PBXBuildFile; productRef = B84A0E8129E79E820007621F /* FirebaseFirestoreCombine-Community */; };
 		B84A0E9829E79E820007621F /* FirebaseStorage in Frameworks */ = {isa = PBXBuildFile; productRef = B84A0E9729E79E820007621F /* FirebaseStorage */; };
 		B84A0E9A29E79E820007621F /* FirebaseStorageCombine-Community in Frameworks */ = {isa = PBXBuildFile; productRef = B84A0E9929E79E820007621F /* FirebaseStorageCombine-Community */; };
-		B8BE994B29DFFCA800EC751F /* AdminDB.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8BE994A29DFFCA800EC751F /* AdminDB.swift */; };
 		B8BE995029DFFFEB00EC751F /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = B8BE994F29DFFFEB00EC751F /* FirebaseAuth */; };
 		B8BE995629E0056500EC751F /* NotificationHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8BE995529E0056500EC751F /* NotificationHandler.swift */; };
+		B8D46D2C29E7F2F7003F41D6 /* UserProfile.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8D46D2B29E7F2F7003F41D6 /* UserProfile.swift */; };
+		B8D46D2E29E7FC3D003F41D6 /* CustomColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8D46D2D29E7FC3D003F41D6 /* CustomColor.swift */; };
 		B8F1B87429E4BBBB00F8A890 /* Authentication.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8F1B87329E4BBBB00F8A890 /* Authentication.swift */; };
 		B8F1B87629E4F87100F8A890 /* HotelsDB.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8F1B87529E4F87100F8A890 /* HotelsDB.swift */; };
 		B8F27B4929B5BD4A00158144 /* VoyaceAdminApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8F27B4829B5BD4A00158144 /* VoyaceAdminApp.swift */; };
@@ -26,7 +27,6 @@
 		B8F27B5129B5BD4C00158144 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B8F27B5029B5BD4C00158144 /* Preview Assets.xcassets */; };
 		B8F27B5829B5C1B200158144 /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B8F27B5729B5C1B200158144 /* Launch Screen.storyboard */; };
 		B8F27B5C29B5D11C00158144 /* AddHotel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8F27B5B29B5D11C00158144 /* AddHotel.swift */; };
-		B8F27B5E29B5DB8400158144 /* NoEntries.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8F27B5D29B5DB8400158144 /* NoEntries.swift */; };
 		B8F27B6029B5DC6A00158144 /* ListHotels.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8F27B5F29B5DC6A00158144 /* ListHotels.swift */; };
 		ED46EF7929E39F3300F21704 /* SignUp.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED46EF7829E39F3300F21704 /* SignUp.swift */; };
 		EDA31AAE29E3B46000342C29 /* SignIn.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDA31AAD29E3B46000342C29 /* SignIn.swift */; };
@@ -839,8 +839,9 @@
 		B84A11BB29E79EA70007621F /* libcryptex_core.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libcryptex_core.tbd; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS16.2.sdk/usr/lib/libcryptex_core.tbd; sourceTree = DEVELOPER_DIR; };
 		B84A11BC29E79EA80007621F /* libedit.3.0.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libedit.3.0.tbd; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS16.2.sdk/usr/lib/libedit.3.0.tbd; sourceTree = DEVELOPER_DIR; };
 		B84A11BD29E79EA80007621F /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS16.2.sdk/System/Library/Frameworks/MapKit.framework; sourceTree = DEVELOPER_DIR; };
-		B8BE994A29DFFCA800EC751F /* AdminDB.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdminDB.swift; sourceTree = "<group>"; };
 		B8BE995529E0056500EC751F /* NotificationHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationHandler.swift; sourceTree = "<group>"; };
+		B8D46D2B29E7F2F7003F41D6 /* UserProfile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProfile.swift; sourceTree = "<group>"; };
+		B8D46D2D29E7FC3D003F41D6 /* CustomColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomColor.swift; sourceTree = "<group>"; };
 		B8F1B87329E4BBBB00F8A890 /* Authentication.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Authentication.swift; sourceTree = "<group>"; };
 		B8F1B87529E4F87100F8A890 /* HotelsDB.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HotelsDB.swift; sourceTree = "<group>"; };
 		B8F27B4529B5BD4A00158144 /* VoyaceAdmin.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VoyaceAdmin.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -851,7 +852,6 @@
 		B8F27B5029B5BD4C00158144 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		B8F27B5729B5C1B200158144 /* Launch Screen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
 		B8F27B5B29B5D11C00158144 /* AddHotel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddHotel.swift; sourceTree = "<group>"; };
-		B8F27B5D29B5DB8400158144 /* NoEntries.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoEntries.swift; sourceTree = "<group>"; };
 		B8F27B5F29B5DC6A00158144 /* ListHotels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListHotels.swift; sourceTree = "<group>"; };
 		ED46EF7829E39F3300F21704 /* SignUp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUp.swift; sourceTree = "<group>"; };
 		EDA31AAD29E3B46000342C29 /* SignIn.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignIn.swift; sourceTree = "<group>"; };
@@ -1689,7 +1689,6 @@
 		B84A0E6429E4FE5B0007621F /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				B8BE994A29DFFCA800EC751F /* AdminDB.swift */,
 				B8F1B87529E4F87100F8A890 /* HotelsDB.swift */,
 				B8F1B87329E4BBBB00F8A890 /* Authentication.swift */,
 				B8BE995529E0056500EC751F /* NotificationHandler.swift */,
@@ -1701,11 +1700,11 @@
 			isa = PBXGroup;
 			children = (
 				B8F27B5F29B5DC6A00158144 /* ListHotels.swift */,
-				B8F27B5D29B5DB8400158144 /* NoEntries.swift */,
 				B8F27B5B29B5D11C00158144 /* AddHotel.swift */,
 				ED46EF7829E39F3300F21704 /* SignUp.swift */,
 				EDA31AAF29E3B8CC00342C29 /* HotelInfo.swift */,
 				EDA31AAD29E3B46000342C29 /* SignIn.swift */,
+				B8D46D2B29E7F2F7003F41D6 /* UserProfile.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -1714,6 +1713,7 @@
 			isa = PBXGroup;
 			children = (
 				B84A0E6D29E78F050007621F /* PhotoPicker.swift */,
+				B8D46D2D29E7FC3D003F41D6 /* CustomColor.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -1846,12 +1846,12 @@
 			files = (
 				ED46EF7929E39F3300F21704 /* SignUp.swift in Sources */,
 				B8F27B4B29B5BD4A00158144 /* ContentView.swift in Sources */,
-				B8BE994B29DFFCA800EC751F /* AdminDB.swift in Sources */,
+				B8D46D2C29E7F2F7003F41D6 /* UserProfile.swift in Sources */,
+				B8D46D2E29E7FC3D003F41D6 /* CustomColor.swift in Sources */,
 				B8BE995629E0056500EC751F /* NotificationHandler.swift in Sources */,
 				EDA31AB029E3B8CC00342C29 /* HotelInfo.swift in Sources */,
 				B8F27B6029B5DC6A00158144 /* ListHotels.swift in Sources */,
 				B8F1B87629E4F87100F8A890 /* HotelsDB.swift in Sources */,
-				B8F27B5E29B5DB8400158144 /* NoEntries.swift in Sources */,
 				EDA31AAE29E3B46000342C29 /* SignIn.swift in Sources */,
 				B8F27B4929B5BD4A00158144 /* VoyaceAdminApp.swift in Sources */,
 				B84A0E6E29E78F050007621F /* PhotoPicker.swift in Sources */,

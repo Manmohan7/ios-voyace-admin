@@ -7,16 +7,6 @@
 
 import SwiftUI
 
-struct CardView: View{
-    var body: some View{
-        Rectangle()
-            .fill(Color.pink)
-            .frame(height: 200)
-            .border(Color.black)
-            .padding()
-    }
-}
-
 struct Carousel: View {
     @State private var index = 0
     private var images = [String]()
@@ -40,11 +30,11 @@ struct Carousel: View {
             }
             .tabViewStyle(PageTabViewStyle(indexDisplayMode: .never))
             
-            HStack(spacing: 2) {
+            HStack(spacing: 4) {
                 ForEach((0..<images.count), id: \.self) { index in
                     Rectangle()
-                        .fill(index == self.index ? Color.purple : Color.purple.opacity(0.5))
-                        .frame(height: 5)
+                        .fill(index == self.index ? CustomColor.darkGreen : CustomColor.darkGreen.opacity(0.5))
+                        .frame(width: 30, height: 5)
                 }
             }
         }
@@ -69,6 +59,7 @@ struct HotelInfo: View {
                 Text(hotel.name)
                     .font(.title)
                     .frame(maxWidth: .infinity, alignment: .leading)
+                    .foregroundColor(CustomColor.darkGreen)
 
                 Text(hotel.location)
                     .frame(maxWidth: .infinity, alignment: .leading)
@@ -82,6 +73,7 @@ struct HotelInfo: View {
                 
                 Text("Rooms Available")
                     .font(.title)
+                    .foregroundColor(CustomColor.darkGreen)
                     .padding(.bottom)
                 
                 Section {

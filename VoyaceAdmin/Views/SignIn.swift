@@ -10,8 +10,8 @@ import SwiftUI
 struct SignIn: View {
     @ObservedObject var Auth = Authentication()
     
-    @State private var email: String = "abc1@gmail.com"
-    @State private var password: String = "123123"
+    @State private var email: String = ""
+    @State private var password: String = ""
     
     
     var body: some View {
@@ -58,7 +58,8 @@ struct SignIn: View {
                 .listRowSeparator(.hidden)
                 .padding([.bottom, .top], 6)
                 .padding([.leading, .trailing], 12)
-                .background(Color(.systemBackground))
+                .background(CustomColor.darkGreen)
+                .foregroundColor(.white)
                 .clipShape(RoundedRectangle(cornerRadius: 20, style: .continuous))
                 
                 

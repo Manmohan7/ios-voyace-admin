@@ -68,8 +68,6 @@ struct Room: Identifiable, Hashable, Codable {
 
 class HotelsDB: ObservableObject {
     
-//    @Published var hotels: [Hotel] = [Hotel(id: "", name: "Long long long long Hotel name", description: "lorem ipsum dolor lorem ipsum dolor lorem ipsum dolor lorem ipsum dolor lorem ipsum dolor lorem ipsum dolor lorem ipsum dolor lorem ipsum dolor", location: "Barrie")]
-    
     @Published var hotels: [Hotel] = []
         
     let uid = UserDefaults.standard.string(forKey: "uid") ?? ""
@@ -97,7 +95,6 @@ class HotelsDB: ObservableObject {
             
             if let documents = snapshot?.documents {
                 for doc in documents {
-                    print("doc is \(doc)")
                     do {
                         let hotel = try doc.data(as: Hotel.self)
                         hotels.append(hotel)
@@ -161,11 +158,8 @@ class HotelsDB: ObservableObject {
             .child(childUID)
         
         do {
-            debugPrint("[Upload] image uploading started")
             _ = try await ref.putDataAsync(imageData, metadata: nil)
-            debugPrint("[Upload] image upload ended, getting url...")
             let url = try await ref.downloadURL()
-            debugPrint("[Upload] image url: \(url.absoluteString)")
             completion(url.absoluteString)
         } catch {
             print("[Error] uploadImage:", error)

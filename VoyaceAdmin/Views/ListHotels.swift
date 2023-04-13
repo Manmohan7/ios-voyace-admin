@@ -12,7 +12,7 @@ struct ListHotels: View {
     
     @StateObject var hotelDB = HotelsDB()
     @State var addHotel = false
-    @State var refresh: Bool = false
+    @State var userProfile: Bool = false
     
     var body: some View {
         NavigationView {
@@ -39,10 +39,12 @@ struct ListHotels: View {
                                         VStack {
                                             Text(hotel.name)
                                                 .font(.system(size: 28))
-                                                .frame(maxWidth: .infinity, maxHeight: 70, alignment: .leading)
+                                                .frame(maxWidth: .infinity, alignment: .leading)
+                                                .foregroundColor(CustomColor.darkGreen)
                                             
                                             Text(hotel.location)
-                                                .frame(maxWidth: .infinity, maxHeight: 70, alignment: .leading)
+                                                .frame(maxWidth: .infinity, alignment: .leading)
+                                                .foregroundColor(.gray)
                                         }
                                     }.background(Color(.systemBackground))
                                 }
@@ -58,21 +60,20 @@ struct ListHotels: View {
                         
                         
                         Button(action: {
-                            print("Add new Hotel")
                             self.addHotel = true
                         }, label: {
                             Text("+")
                                 .font(.title3)
                                 .padding(6)
-                                .background(Color(.systemBlue))
+                                .background(CustomColor.darkGreen)
                                 .foregroundColor(Color(.white))
                                 .clipShape(Circle())
                             
                             Text("Add Hotel")
+                                .foregroundColor(CustomColor.darkGreen)
                         })
                         .padding([.bottom, .top], 6)
                         .padding([.leading, .trailing], 12)
-                        .background(Color(.systemBackground))
                         .clipShape(RoundedRectangle(cornerRadius: 20, style: .continuous))
 
                         
@@ -82,9 +83,25 @@ struct ListHotels: View {
         }
         .navigationTitle("Hotels")
         .navigationBarBackButtonHidden()
+        .navigationBarItems(
+            trailing: Button(action: {
+                self.userProfile = true
+            }, label: {
+                Image(systemName: "person.crop.circle")
+                    .tint(CustomColor.darkGreen)
+                    .background( NavigationLink("", destination: UserProfile()).opacity(0) )
+            })
+        )
+        .navigationDestination(isPresented: $userProfile) {
+            UserProfile()
+        }
         .navigationDestination(isPresented: $addHotel) {
             AddHotel()
         }
+        .toolbarBackground(
+            Color.white,
+            for: .navigationBar
+        )
         .onAppear() {
             hotelDB.fetchHotels()
         }

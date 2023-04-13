@@ -45,4 +45,19 @@ class Authentication: ObservableObject {
             }
         }
     }
+    
+    func signOut() {
+        do {
+            try Auth.auth().signOut()
+            DispatchQueue.main.async {
+                withAnimation {
+                    self.loggedIn = false
+                    self.defaults.removeObject(forKey: "email")
+                    self.defaults.removeObject(forKey: "uid")
+                }
+            }
+        } catch {
+            print("Some error in signing out")
+        }
+    }
 }

@@ -50,6 +50,7 @@ struct AddHotel: View {
                 }, label: {
                     HStack {
                         Text("Upload images")
+                        .foregroundColor(CustomColor.darkGreen)
                     }
                 })
                 .fullScreenCover(isPresented: $showPhotoPicker) {
@@ -66,12 +67,14 @@ struct AddHotel: View {
                     .edgesIgnoringSafeArea(.all)
                 }
                 
-                Section("Images") {
-                    HStack {
-                        ForEach(selectedImages, id:\.self) { img in
-                            Image(uiImage: img)
-                                .resizable()
-                                .frame(width: 50, height: 50, alignment: .center)
+                if selectedImages.count != 0 {
+                    Section("Selected Images") {
+                        HStack {
+                            ForEach(selectedImages, id:\.self) { img in
+                                Image(uiImage: img)
+                                    .resizable()
+                                    .frame(width: 50, height: 50, alignment: .center)
+                            }
                         }
                     }
                 }
@@ -96,11 +99,12 @@ struct AddHotel: View {
                         Text("+")
                             .font(.title3)
                             .padding(6)
-                            .background(Color(.systemBlue))
+                            .background(CustomColor.darkGreen)
                             .foregroundColor(Color(.white))
                             .clipShape(Circle())
                         
                         Text("Add Room")
+                            .foregroundColor(CustomColor.darkGreen)
                     }
                 })
                 .frame(maxWidth: .infinity)
@@ -135,7 +139,7 @@ struct AddHotel: View {
                         .frame(width: 300, height: 40)
                         .padding([.bottom, .top], 6)
                         .padding([.leading, .trailing], 12)
-                        .background(Color(.systemBackground))
+                        .background(CustomColor.darkGreen)
                         .clipShape(RoundedRectangle(cornerRadius: 20, style: .continuous))
                     
                 }.listRowBackground(Color(UIColor.systemGroupedBackground))

@@ -49,8 +49,6 @@ struct SignUp: View {
                 }
                 
                 Button("Sign Up") {
-                    print("save the data")
-                    
                     guard password == cPassword else {
                         print("password do not match")
                         return
@@ -65,7 +63,8 @@ struct SignUp: View {
                 .listRowSeparator(.hidden)
                 .padding([.bottom, .top], 6)
                 .padding([.leading, .trailing], 12)
-                .background(Color(.systemBackground))
+                .background(CustomColor.darkGreen)
+                .foregroundColor(.white)
                 .clipShape(RoundedRectangle(cornerRadius: 20, style: .continuous))
                 
                 HStack {
