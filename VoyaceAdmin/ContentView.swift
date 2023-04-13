@@ -10,19 +10,10 @@ import SwiftUI
 struct ContentView: View {
     var body: some View {
         NavigationStack {
-//            VStack {
-                // add condition to check if there is some existing data
-//                if(!true) {
-//                    // data exists then display it in a table format
-//                    ListHotels()
-//                } else {
-//                    NoEntries()
-//                }
-              
-              SignUp()
-//            }
-//            .padding()
-        }.navigationTitle("Home shyd")
+            SignIn()
+                .frame(maxWidth: .infinity, maxHeight: .infinity)
+                .transition(.move(edge: .leading))
+        }
     }
 }
 
