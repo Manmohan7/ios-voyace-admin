@@ -77,18 +77,13 @@ class HotelsDB: ObservableObject {
     func setHotel(hotel: Hotel) {
         do {
             try databasePath.document().setData(from: hotel)
-            
-            // refresh list view
-            DispatchQueue.main.asyncAfter(deadline: .now() + 5) {
-                self.fetchHotels()
-            }
         } catch {
             print("some issue in set data")
         }
     }
     
     func fetchHotels() {
-        databasePath.getDocuments { snapshot, error in
+        databasePath.addSnapshotListener { snapshot, error in
             guard error == nil else { return }
             
             var hotels = [Hotel]()

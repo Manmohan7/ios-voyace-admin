@@ -53,8 +53,6 @@ struct ListHotels: View {
                                 .padding([.bottom, .top], 6)
                                 .padding([.leading, .trailing], 12)
                                 .buttonStyle(.plain)
-
-                                Divider().padding(0)
                             }
                         }
                         
