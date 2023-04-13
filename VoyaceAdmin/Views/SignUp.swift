@@ -1,5 +1,5 @@
 //
-//  SignIn.swift
+//  SignUp.swift
 //  VoyaceAdmin
 //
 //  Created by Manmohan Singh on 2023-04-09.
@@ -7,13 +7,12 @@
 
 import SwiftUI
 
-struct SignIn: View {
+struct SignUp: View {
     @ObservedObject var Auth = Authentication()
     
     @State private var email: String = ""
     @State private var password: String = ""
-    
-    @State private var valid: Bool = false
+    @State private var cPassword: String = ""
     
     var body: some View {
         NavigationView {
@@ -30,14 +29,10 @@ struct SignIn: View {
                 .listRowBackground(Color.clear)
                 .listRowSeparator(.hidden)
                 
-                HStack {
-                    Spacer()
-                    
-                    Text("Sign In")
-                        .font(.system(size: 36))
-                    
-                    Spacer()
-                }.listRowBackground(Color.clear)
+                Text("Sign Up")
+                    .font(.system(size: 36))
+                    .frame(maxWidth: .infinity)
+                    .listRowBackground(Color.clear)
                 
                 Section("Email") {
                     TextField("xyz@gmail.com", text: $email)
@@ -46,26 +41,43 @@ struct SignIn: View {
                 }
                 
                 Section("Password") {
-                    SecureField("******", text: $password)
+                    SecureField("*******", text: $password)
                 }
                 
-                Button("Sign In") {
-                    Auth.signIn(email: email, password: password)
+                Section("Confirm Password") {
+                    SecureField("*******", text: $cPassword)
                 }
+                
+                Button("Sign Up") {
+                    print("save the data")
+                    
+                    guard password == cPassword else {
+                        print("password do not match")
+                        return
+                    }
+                    
+                    Auth.signUp(email: email, password: password)
+                }
+                .fontWeight(.semibold)
                 .listRowBackground(Color.clear)
-                .frame(maxWidth: .infinity, alignment: .center)
+                .frame(maxWidth: .infinity)
+                .frame(width: 300, height: 40)
                 .listRowSeparator(.hidden)
-                
+                .padding([.bottom, .top], 6)
+                .padding([.leading, .trailing], 12)
+                .background(Color(.systemBackground))
+                .clipShape(RoundedRectangle(cornerRadius: 20, style: .continuous))
                 
                 HStack {
-                    Text("Don't have an account?")
+                    Text("Already have an account?")
                     
-                    Text("Sign Up")
+                    Text("Sign In")
                         .foregroundColor(.blue)
-                        .background( NavigationLink("", destination: SignUp()).opacity(0) )
+                        .background( NavigationLink("", destination: SignIn()).opacity(0) )
                 }
                 .listRowBackground(Color.clear)
                 .frame(maxWidth: .infinity)
+
                 
             }
         }
@@ -73,12 +85,11 @@ struct SignIn: View {
         .navigationDestination(isPresented: $Auth.loggedIn) {
             ListHotels()
         }
-        
     }
 }
 
-struct SignIn_Previews: PreviewProvider {
+struct SignUp_Previews: PreviewProvider {
     static var previews: some View {
-        SignIn()
+        SignUp()
     }
 }

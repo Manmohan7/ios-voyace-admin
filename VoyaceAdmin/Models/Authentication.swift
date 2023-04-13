@@ -12,6 +12,8 @@ import FirebaseAuth
 class Authentication: ObservableObject {
     @Published var loggedIn: Bool = false
     
+    let defaults = UserDefaults.standard
+    
     func signUp(email: String, password: String) {
         Auth.auth().createUser(withEmail: email, password: password) { authResult, error in
             if let error = error {
@@ -21,24 +23,24 @@ class Authentication: ObservableObject {
             
             DispatchQueue.main.async {
                 self.loggedIn = true
-                print("user is created")
+                self.defaults.set(authResult?.user.email, forKey: "email")
+                self.defaults.set(authResult?.user.uid, forKey: "uid")
             }
         }
     }
     
     func signIn(email: String, password: String) {
         Auth.auth().signIn(withEmail: email, password: password) { authResult, error in
-            print("user logged in")
-            
             if let err = error {
                 print("Some error occurred", err)
                 return
             }
             
-            DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
+            DispatchQueue.main.async {
                 withAnimation {
                     self.loggedIn = true
-                    print("queue updated", self.loggedIn)
+                    self.defaults.set(authResult?.user.email, forKey: "email")
+                    self.defaults.set(authResult?.user.uid, forKey: "uid")
                 }
             }
         }

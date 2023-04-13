@@ -30,5 +30,7 @@
 	<true></true>
 	<key>GOOGLE_APP_ID</key>
 	<string>1:843875061461:ios:4b85345d39af592b705c5c</string>
+	<key>DATABASE_URL</key>
+	<string>https://ios-voyace-admin-default-rtdb.firebaseio.com</string>
 </dict>
 </plist>

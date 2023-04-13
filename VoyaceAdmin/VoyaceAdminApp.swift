@@ -17,9 +17,9 @@ class AppDelegate: NSObject, UIApplicationDelegate {
       let center = UNUserNotificationCenter.current()
       center.requestAuthorization(options: [.alert, .sound, .badge]) { granted, error in
           
-          if let error = error {
-              // Handle the error here.
+          guard let error = error else {
               print(error)
+              return
           }
       }
     return true
